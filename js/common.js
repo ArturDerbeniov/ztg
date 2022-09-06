@@ -2,8 +2,22 @@ document.addEventListener("click", eventDocClick, false);
 window.addEventListener("load", WindowLoad, false);
 
 function WindowLoad() {
-	if(window.innerWidth >= 1200) {		
-		loadJS('https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js', callRellax, document.body);
+	if(window.innerWidth >= 1200) {
+		var r;
+		if(r = document.querySelector(".headerPage__wrapImg .rellax")) {
+			var itr = 0;
+			var interval = setInterval(function () {
+				itr++;
+				if(r.clientHeight) {
+					clearInterval(interval);
+					loadJS('https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js', callRellax, document.body);
+				}
+				if(itr >= 10) {
+					clearInterval(interval);
+				}
+				console.log(r.clientHeight, " ; ", itr);
+			}, 500);
+		}
 	}
 }
 function eventDocClick(e) {

@@ -2,7 +2,9 @@ document.addEventListener("click", eventDocClick, false);
 window.addEventListener("load", WindowLoad, false);
 
 function WindowLoad() {
-	loadJS('https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js', callRellax, document.body);
+	if(window.innerWidth >= 1200) {		
+		loadJS('https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js', callRellax, document.body);
+	}
 }
 function eventDocClick(e) {
     var targ = e.target;

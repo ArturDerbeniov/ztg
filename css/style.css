@@ -254,6 +254,11 @@ p {
   }
 }
 
+.btn-group .btn {
+  display: inline-flex;
+  flex: 1;
+}
+
 /* Header */
 .headerMain__menu__list {
   list-style: none;

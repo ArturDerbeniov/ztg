@@ -1005,8 +1005,15 @@ h3, .h3 h4,
     left: auto;
     top: -80px;
   }
+  .headerPage__wrapImg .rellax {
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
   .headerPage__wrapImg .rellax:not([style^=transform]) {
     transform: translate3d(0, 0, 0);
+  }
+  .headerPage__wrapImg .rellax.active {
+    opacity: 1;
   }
   .headerPage-index {
     margin-bottom: 4%;

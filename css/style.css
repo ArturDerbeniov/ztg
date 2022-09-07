@@ -1508,12 +1508,12 @@ h3, .h3 h4,
   opacity: 1 !important;
 }
 
-s [data-aos=showUpIn] {
+[data-aos=showUpIn] {
   opacity: 0;
   transform: scale(0.5);
   transition-property: transform, opacity;
 }
-s [data-aos=showUpIn].aos-animate {
+[data-aos=showUpIn].aos-animate {
   opacity: 1;
   transform: scale(1);
 }

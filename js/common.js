@@ -11,11 +11,12 @@ function WindowLoad() {
 				if(r.clientHeight) {
 					clearInterval(interval);
 					loadJS('https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js', callRellax, document.body);
+					r.classList.add("active");
 				}
-				if(itr >= 10) {
+				if(itr >= 5) {
 					clearInterval(interval);
+					r.classList.add("active");
 				}
-				console.log(r.clientHeight, " ; ", itr);
 			}, 500);
 		}
 	}
